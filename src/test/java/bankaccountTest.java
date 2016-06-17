@@ -11,9 +11,7 @@ import bankaccount.BankAccount;
 import org.junit.Test;
 
 public class bankaccountTest {
-
-	private BankAccount account;
-	​
+		private BankAccount account;
 		@Test
 		public void testDeposit() {
 			account.deposit(100);
@@ -24,13 +22,11 @@ public class bankaccountTest {
 			account = new BankAccount();
 			account.deposit(1000);
 		}
-	​
 		@Test 
 		public void testWithdraw() {
 			account.withdraw(500);
 			assertTrue("Test Withdraw", 500 == account.getBalance());
 		}
-	​
 		@Test(expected=RuntimeException.class)
 		public void testNegativeWithdraw() throws Exception{
 			account.withdraw(20000);
@@ -40,5 +36,4 @@ public class bankaccountTest {
 			Thread.sleep(2000);
 			account.deposit(2000);
 		}
-
 }
